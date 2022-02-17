@@ -3,7 +3,7 @@ enum layers {
     WindowsLayer,
     GameLayer,
     NumpadLayer,
-    MouseLayer,
+    //MouseLayer,
     SymbolLayer,
     ArrowsLayer,
     FuncLayer,

@@ -130,7 +130,7 @@ bool layer_breathing(effect_params_t* params) {
                 case NumpadLayer:
                     hsv = FILTER_BREATH(hsv, isAzure);
                     break;
-                case MouseLayer:
+                //case MouseLayer:
                 case ArrowsLayer:
                     hsv = FILTER_BREATH(hsv, isGold);
                     hsv = FILTER_CROSS_SPLASH(hsv, m, isGold || isPink);
