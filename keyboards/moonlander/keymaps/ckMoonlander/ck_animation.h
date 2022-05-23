@@ -90,13 +90,13 @@ bool layer_breathing(effect_params_t* params) {
         };
         bool isVertical = true;
         bool isTurnedOff = !hsv.h && !hsv.s && !hsv.v;
-        bool isAzure = hsv.h == 132 && hsv.s == 102 && hsv.v == 255;
+        //bool isAzure = hsv.h == 132 && hsv.s == 102 && hsv.v == 255;
         //bool isBlue = hsv.h == 170 && hsv.s == 255 && hsv.v == 255;
         bool isChartReuse = hsv.h == 64 && hsv.s == 255 && hsv.v == 255;
         //bool isCoral= hsv.h== 11 && hsv.s == 176 && hsv.v == 255;
         bool isCyan = hsv.h == 128 && hsv.s == 255 && hsv.v == 255;
         bool isGold = hsv.h == 36 && hsv.s == 255 && hsv.v == 255;
-        //bool isGoldenRod = hsv.h == 30 && hsv.s == 218 && hsv.v == 218;
+        bool isGoldenRod = hsv.h == 30 && hsv.s == 218 && hsv.v == 218;
         //bool isGreen = hsv.h == 85 && hsv.s == 255 && hsv.v == 255;
         bool isMagenta = hsv.h == 213 && hsv.s == 255 && hsv.v == 255;
         //bool isOrange= hsv.h== 28 && hsv.s == 255 && hsv.v == 255;
@@ -127,13 +127,13 @@ bool layer_breathing(effect_params_t* params) {
                     hsv = FILTER_BREATH(hsv, isGold || m == 0);
                     hsv = FILTER_CROSS_SPLASH(hsv, m, isGold);
                     break;
-                case NumpadLayer:
-                    hsv = FILTER_BREATH(hsv, isAzure);
-                    break;
+                //case NumpadLayer:
+                    //hsv = FILTER_BREATH(hsv, isAzure);
+                    //break;
                 //case MouseLayer:
                 case ArrowsLayer:
-                    hsv = FILTER_BREATH(hsv, isGold);
-                    hsv = FILTER_CROSS_SPLASH(hsv, m, isGold || isPink);
+                    hsv = FILTER_BREATH(hsv, isGold || isGoldenRod);
+                    hsv = FILTER_CROSS_SPLASH(hsv, m, isGold || isGoldenRod || isPink);
                     break;
                 case SymbolLayer:
                     hsv = FILTER_BREATH(hsv, !isTurnedOff && !isPink && !isMagenta && !isRed);
