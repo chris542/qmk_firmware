@@ -251,6 +251,62 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 }
 //END of Animated Layer Colour
 
+// Custom LED Lights!
+layer_state_t layer_state_set_kb(layer_state_t state) {
+    state = layer_state_set_user(state);
+    if (!keyboard_config.led_level) return state;
+    bool LED_1 = false;
+    bool LED_2 = false;
+    bool LED_3 = false;
+    bool LED_4 = false;
+    bool LED_5 = false;
+    bool LED_6 = false;
+
+    uint8_t layer = get_highest_layer(state);
+    switch (layer) {
+        case 0:
+          break;
+        case 1:
+            LED_1 = true;
+            break;
+        case 2:
+            LED_2 = true;
+            break;
+        case 3:
+            LED_4 = true;
+            LED_5 = true;
+            LED_6 = true;
+            break;
+        case 4:
+            LED_5 = true;
+            break;
+        case 5:
+            LED_1 = true;
+            LED_3 = true;
+            LED_4 = true;
+            LED_6 = true;
+            break;
+        default:
+            LED_1 = true;
+            LED_2 = true;
+            LED_3 = true;
+            LED_4 = true;
+            LED_5 = true;
+            LED_6 = true;
+            break;
+    }
+
+    ML_LED_1(LED_1);
+    ML_LED_2(LED_2);
+    ML_LED_3(LED_3);
+    ML_LED_4(LED_4);
+    ML_LED_5(LED_5);
+    ML_LED_6(LED_6);
+    return state;
+}
+// END of Custom LED Lights!
+
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case RGB_SLD:
