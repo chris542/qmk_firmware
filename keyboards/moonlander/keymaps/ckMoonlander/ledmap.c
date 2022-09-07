@@ -112,62 +112,6 @@ PROGMEM uint8_t ledmap[][DRIVER_LED_TOTAL][3] = {
         AZURE
     },
 
-    //INDICATOR = TURQUOISE
-    //MAIN      = AZURE
-    //MODIFIERS = NONE
-    //SPECIALS  = WHITE/MAGENTA/ORANGE/RED/GREEN/GOLD
-    //NUMBERS   = AZURE
-    //ARROWS    = NONE
-    //[NumpadLayer] = {
-        //NONE      , NONE      , NONE    , NONE  , NONE  ,
-        //NONE      , NONE      , NONE    , NONE  , NONE  ,
-        //NONE      , NONE      , NONE    , NONE  , NONE  ,
-        //NONE      , NONE      , NONE    , NONE  , NONE  ,
-        //NONE      , NONE      , NONE    , NONE  , NONE  ,
-        //NONE      , NONE      , NONE    , NONE  ,
-        //NONE      , NONE      , NONE    ,
-        //GOLDENROD , GOLDENROD , MAGENTA ,
-        //YELLOW    ,
-
-        //NONE      , NONE      , NONE    , NONE  , NONE  ,
-        //RED       , GREEN     , WHITE   , NONE  , NONE  ,
-        //ORANGE    , AZURE     , AZURE   , AZURE , NONE  ,
-        //MAGENTA   , AZURE     , AZURE   , AZURE , GOLD  ,
-        //WHITE     , AZURE     , AZURE   , AZURE , AZURE ,
-        //NONE      , NONE      , NONE    , NONE  ,
-        //NONE      , NONE      , NONE    ,
-        //ORANGE    , TURQUOISE , MAGENTA ,
-        //NONE
-    //},
-
-    //INDICATOR = CHARTREUSE
-    //MAIN      = AZURE
-    //MODIFIERS = NONE
-    //SPECIALS  = WHITE/MAGENTA/ORANGE/RED/GREEN/GOLD
-    //NUMBERS   = AZURE
-    //ARROWS    = NONE
-    //[MouseLayer] = {
-        //NONE      , NONE       , CYAN    , CYAN  , NONE ,
-        //NONE      , NONE       , NONE    , NONE  , NONE ,
-        //NONE      , NONE       , NONE    , NONE  , NONE ,
-        //NONE      , NONE       , NONE    , NONE  , CYAN ,
-        //NONE      , NONE       , NONE    , NONE  , CYAN ,
-        //NONE      , NONE       , NONE    , NONE  ,
-        //NONE      , NONE       , NONE    ,
-        //GOLDENROD , GOLDENROD  , MAGENTA ,
-        //NONE      ,
-
-        //NONE      , NONE       , AZURE   , NONE  , NONE ,
-        //NONE      , NONE       , NONE    , NONE  , NONE ,
-        //NONE      , RED        , GOLD    , BLUE  , NONE ,
-        //NONE      , GOLD       , GOLD    , BLUE  , NONE ,
-        //NONE      , RED        , GOLD    , BLUE  , NONE ,
-        //NONE      , NONE       , RED     , RED   ,
-        //NONE      , NONE       , NONE    ,
-        //NONE      , CHARTREUSE , MAGENTA ,
-        //NONE
-    //},
-
     //INDICATOR = ORANGE
     //MAIN      = *
     //MODIFIERS = RED
