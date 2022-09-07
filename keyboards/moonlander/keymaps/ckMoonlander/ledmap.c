@@ -171,7 +171,7 @@ PROGMEM uint8_t ledmap[][DRIVER_LED_TOTAL][3] = {
     //INDICATOR = ORANGE
     //MAIN      = *
     //MODIFIERS = RED
-    //SPECIALS  = PINK
+    //SPECIALS  = PINK, WHITE
     //NUMBERS   = NONE
     //ARROWS    = NONE
     [SymbolLayer] = {
@@ -182,7 +182,7 @@ PROGMEM uint8_t ledmap[][DRIVER_LED_TOTAL][3] = {
         NONE   , CYAN   , TURQUOISE , NONE   , RED       ,
         NONE   , CYAN   , NONE      , NONE   ,
         NONE   , CYAN   , NONE      ,
-        NONE   , NONE   , MAGENTA   ,
+        WHITE  , WHITE  , MAGENTA   ,
         NONE   ,
 
         PINK   , NONE   , NONE      , NONE   , NONE      ,
@@ -200,17 +200,17 @@ PROGMEM uint8_t ledmap[][DRIVER_LED_TOTAL][3] = {
     //MAIN      = GOLD
     //MODIFIERS = CHARTREUSE
     //SPECIALS  = PINK
-    //NUMBERS   = GOLDENROD
+    //NUMBERS   = AZURE
     //ARROWS    = GOLD
     [ArrowsLayer] = {
-        PINK  , NONE      , CHARTREUSE , CHARTREUSE , PINK       ,
-        NONE  , GOLDENROD , GOLDENROD  , NONE       , NONE       ,
-        NONE  , GOLDENROD , GOLDENROD  , NONE       , PINK       ,
-        NONE  , GOLDENROD , GOLDENROD  , NONE       , CHARTREUSE ,
-        NONE  , GOLDENROD , GOLDENROD  , NONE       , CHARTREUSE ,
-        NONE  , GOLDENROD , GOLDENROD  , NONE       ,
-        NONE  , GOLDENROD , NONE       ,
-        WHITE , WHITE     , MAGENTA    ,
+        PINK  , NONE  , CHARTREUSE , CHARTREUSE , PINK       ,
+        NONE  , NONE  , NONE       , NONE       , NONE       ,
+        NONE  , AZURE , AZURE      , AZURE      , PINK       ,
+        NONE  , AZURE , AZURE      , AZURE      , CHARTREUSE ,
+        NONE  , AZURE , AZURE      , AZURE      , CHARTREUSE ,
+        NONE  , NONE  , AZURE      , NONE       ,
+        NONE  , NONE  , NONE       ,
+        WHITE , WHITE , MAGENTA    ,
         NONE  ,
 
         PINK , NONE  , NONE    , NONE , NONE ,
