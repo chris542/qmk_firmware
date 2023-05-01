@@ -95,6 +95,7 @@ __attribute__((weak)) bool get_auto_shift_no_auto_repeat(uint16_t keycode, keyre
 __attribute__((weak)) void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
     if (shifted) {
         add_weak_mods(MOD_BIT(KC_LSFT));
+        send_keyboard_report();
     }
     register_code16((IS_RETRO(keycode)) ? keycode & 0xFF : keycode);
 }
@@ -125,7 +126,7 @@ static void autoshift_flush_shift(void) {
     autoshift_flags.holding_shift = false;
 #    ifdef CAPS_WORD_ENABLE
     if (!is_caps_word_on())
-#    endif
+#    endif // CAPS_WORD_ENABLE
     {
         del_weak_mods(MOD_BIT(KC_LSFT));
     }
@@ -330,11 +331,13 @@ void autoshift_disable(void) {
 
 #    ifndef AUTO_SHIFT_NO_SETUP
 void autoshift_timer_report(void) {
+#        ifdef SEND_STRING_ENABLE
     char display[8];
 
     snprintf(display, 8, "\n%d\n", autoshift_timeout);
 
     send_string((const char *)display);
+#        endif
 }
 #    endif
 
