@@ -64,7 +64,7 @@ void raw_hid_receive(uint8_t *data, uint8_t length) {
                 rgb_matrix_reload_from_eeprom();
                 rawhid_state.rgb_control = false;
             } else {
-                rgb_matrix_mode_noeeprom(RGB_MATRIX_CUSTOM_oryx_webhid_effect);
+                rgb_matrix_mode_noeeprom(RGB_MATRIX_CUSTOM_layer_breathing);
                 rawhid_state.rgb_control = true;
             }
 #else
